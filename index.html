@@ -1,0 +1,1119 @@
+<!DOCTYPE html>
+<html>
+
+<header>
+<p align="center">Time Remaining:</p>
+<p id="tick" align="center">120</p>
+</header>
+
+<body>
+
+<div class="row" align="center">
+<input type="image" id="img1" src="white.jpg"  style="width:240px"  align = "Left" onclick="order_1();">
+
+<input type="image" id="img21" src="white.jpg"  style="width:160px"  align = "Left" onclick="order_21();">
+
+<input type="image" id="img2" src="white.jpg"  style="width:160px"  onclick="order_2();">
+
+
+<input type="image" id="img3" src="white.jpg"  style="width:160px"   onclick="order_3();">
+
+<input type="image" id="img22" src="white.jpg"  style="width:160px"  align = "Left" onclick="order_22();">
+
+<input type="image" id="img4" src="white.jpg"  style="width:240px" align = "Right" onclick="order_4();">
+</div>
+<div class="row" align="center">
+<input type="image" id="img5" src="white.jpg"  style="width:120px" align="center" onclick="order_5();">
+
+<input type="image" id="img6" src="white.jpg"  style="width:80px" onclick="order_6();">
+
+<input type="image" id="img7" src="white.jpg"  style="width:80px" onclick="order_7();">
+
+<input type="image" id="img8" src="white.jpg"  style="width:120px" align="center" onclick="order_8();">
+</div>
+<div align="center" class="row">
+<input type="image" id="img9" src="white.jpg"  style="width:200px" align="Left" onclick="order_9();">
+
+<input type="image" id="img10" src="white.jpg"  style="width:120px"  align="Left" onclick="order_10();">
+
+
+<input type="image" src="start.png" id="img" align="center" style="width:100px" onclick="randomArray();myFunction();clock();onClick();">
+
+
+<input type="image" id="img11" src="white.jpg"  style="width:200px" align="Right" onclick="order_11();">
+
+<input type="image" id="img12" src="white.jpg"  style="width:120px" align="Right" onclick="order_12();">
+</div>
+
+
+<div class="row" align="center" >
+<input type="image" id="img13" src="white.jpg"  style="width:120px" align="center" onclick="order_13();">
+
+<input type="image" id="img14" src="white.jpg"  style="width:80px" onclick="order_14();">
+
+<input type="image" id="img15" src="white.jpg"  style="width:80px" onclick="order_15();">
+
+<input type="image" id="img16" src="white.jpg"  style="width:120px" align="center" onclick="order_16();">
+</div>
+<div class="row" align="center">
+<input type="image" id="img17" src="white.jpg"  style="width:240px"  align="Left" onclick="order_17();">
+
+<input type="image" id="img23" src="white.jpg"  style="width:160px"  align = "Left" onclick="order_23();">
+
+<input type="image" id="img18" src="white.jpg"  style="width:160px"  onclick="order_18();">
+
+<input type="image" id="img19" src="white.jpg"  style="width:160px"  onclick="order_19();">
+
+<input type="image" id="img24" src="white.jpg"  style="width:160px"  align = "Left" onclick="order_24();">
+
+<input type="image" id="img20" src="white.jpg"  style="width:240px" align="right" onclick="order_20();">
+</div>
+</body>
+
+<script>
+function randomArray(){
+      var arr = [];
+      while(arr.length < 24){
+        var r = Math.floor(Math.random() * 24) + 1;
+        if(arr.indexOf(r) === -1) arr.push(r);
+
+      }
+      window.GlobalMyArray=arr
+      console.log(arr);
+      return arr
+}
+
+function clock() {
+     var myTimer = setInterval(myClock, 1000);
+     var c = 120;
+
+     function myClock() {
+       document.getElementById("tick").innerHTML = --c;
+       if (c == 0) {
+         clearInterval(myTimer);
+
+       }
+     }
+   }
+
+function onClick(){
+  var time = setInterval(timer, 120000);
+  document.getElementById("img").src = "puppy.jpg"
+
+}
+
+function timer(){
+
+  if (x < 25){
+    document.getElementById("img1").src = "refresh.jpg"
+    document.getElementById("img2").src = "refresh.jpg"
+    document.getElementById("img3").src = "refresh.jpg"
+    document.getElementById("img4").src = "refresh.jpg"
+    document.getElementById("img5").src = "refresh.jpg"
+    document.getElementById("img6").src = "refresh.jpg"
+    document.getElementById("img7").src = "refresh.jpg"
+    document.getElementById("img8").src = "refresh.jpg"
+    document.getElementById("img9").src = "refresh.jpg"
+    document.getElementById("img10").src = "refresh.jpg"
+    document.getElementById("img11").src = "refresh.jpg"
+    document.getElementById("img12").src = "refresh.jpg"
+    document.getElementById("img13").src = "refresh.jpg"
+    document.getElementById("img14").src = "try_again.jpg"
+    document.getElementById("img15").src = "try_again.jpg"
+    document.getElementById("img16").src = "refresh.jpg"
+    document.getElementById("img17").src = "refresh.jpg"
+    document.getElementById("img18").src = "refresh.jpg"
+    document.getElementById("img19").src = "refresh.jpg"
+    document.getElementById("img20").src = "refresh.jpg"
+    document.getElementById("img21").src = "refresh.jpg"
+    document.getElementById("img22").src = "refresh.jpg"
+    document.getElementById("img23").src = "refresh.jpg"
+    document.getElementById("img24").src = "refresh.jpg"
+  }
+
+  }
+
+
+var x = 1
+function order_1(){
+
+  var number = GlobalMyArray
+  if (number[0] === x){
+    x=x+1
+    document.getElementById("img1").src = "white.jpg"
+  if (x===25){
+    document.getElementById("img1").src = "refresh.jpg"
+    document.getElementById("img2").src = "refresh.jpg"
+    document.getElementById("img3").src = "refresh.jpg"
+    document.getElementById("img4").src = "refresh.jpg"
+    document.getElementById("img5").src = "refresh.jpg"
+    document.getElementById("img6").src = "refresh.jpg"
+    document.getElementById("img7").src = "refresh.jpg"
+    document.getElementById("img8").src = "refresh.jpg"
+    document.getElementById("img9").src = "refresh.jpg"
+    document.getElementById("img10").src = "refresh.jpg"
+    document.getElementById("img11").src = "refresh.jpg"
+    document.getElementById("img12").src = "refresh.jpg"
+    document.getElementById("img13").src = "refresh.jpg"
+    document.getElementById("img14").src = "success.jpg"
+    document.getElementById("img15").src = "success.jpg"
+    document.getElementById("img16").src = "refresh.jpg"
+    document.getElementById("img17").src = "refresh.jpg"
+    document.getElementById("img18").src = "refresh.jpg"
+    document.getElementById("img19").src = "refresh.jpg"
+    document.getElementById("img20").src = "refresh.jpg"
+    document.getElementById("img21").src = "refresh.jpg"
+    document.getElementById("img22").src = "refresh.jpg"
+    document.getElementById("img23").src = "refresh.jpg"
+    document.getElementById("img24").src = "refresh.jpg"
+
+  }
+  }
+
+}
+
+function order_2(){
+
+  var number = GlobalMyArray
+  if (number[1] === x){
+    x=x+1
+    document.getElementById("img2").src = "white.jpg"
+  if (x===25){
+    document.getElementById("img1").src = "refresh.jpg"
+    document.getElementById("img2").src = "refresh.jpg"
+    document.getElementById("img3").src = "refresh.jpg"
+    document.getElementById("img4").src = "refresh.jpg"
+    document.getElementById("img5").src = "refresh.jpg"
+    document.getElementById("img6").src = "refresh.jpg"
+    document.getElementById("img7").src = "refresh.jpg"
+    document.getElementById("img8").src = "refresh.jpg"
+    document.getElementById("img9").src = "refresh.jpg"
+    document.getElementById("img10").src = "refresh.jpg"
+    document.getElementById("img11").src = "refresh.jpg"
+    document.getElementById("img12").src = "refresh.jpg"
+    document.getElementById("img13").src = "refresh.jpg"
+    document.getElementById("img14").src = "success.jpg"
+    document.getElementById("img15").src = "success.jpg"
+    document.getElementById("img16").src = "refresh.jpg"
+    document.getElementById("img17").src = "refresh.jpg"
+    document.getElementById("img18").src = "refresh.jpg"
+    document.getElementById("img19").src = "refresh.jpg"
+    document.getElementById("img20").src = "refresh.jpg"
+    document.getElementById("img21").src = "refresh.jpg"
+    document.getElementById("img22").src = "refresh.jpg"
+    document.getElementById("img23").src = "refresh.jpg"
+    document.getElementById("img24").src = "refresh.jpg"
+
+  }
+  }
+
+}
+
+function order_3(){
+
+  var number = GlobalMyArray
+  if (number[2] === x){
+    x=x+1
+    document.getElementById("img3").src = "white.jpg"
+  if (x===25){
+    document.getElementById("img1").src = "refresh.jpg"
+    document.getElementById("img2").src = "refresh.jpg"
+    document.getElementById("img3").src = "refresh.jpg"
+    document.getElementById("img4").src = "refresh.jpg"
+    document.getElementById("img5").src = "refresh.jpg"
+    document.getElementById("img6").src = "refresh.jpg"
+    document.getElementById("img7").src = "refresh.jpg"
+    document.getElementById("img8").src = "refresh.jpg"
+    document.getElementById("img9").src = "refresh.jpg"
+    document.getElementById("img10").src = "refresh.jpg"
+    document.getElementById("img11").src = "refresh.jpg"
+    document.getElementById("img12").src = "refresh.jpg"
+    document.getElementById("img13").src = "refresh.jpg"
+    document.getElementById("img14").src = "success.jpg"
+    document.getElementById("img15").src = "success.jpg"
+    document.getElementById("img16").src = "refresh.jpg"
+    document.getElementById("img17").src = "refresh.jpg"
+    document.getElementById("img18").src = "refresh.jpg"
+    document.getElementById("img19").src = "refresh.jpg"
+    document.getElementById("img20").src = "refresh.jpg"
+    document.getElementById("img21").src = "refresh.jpg"
+    document.getElementById("img22").src = "refresh.jpg"
+    document.getElementById("img23").src = "refresh.jpg"
+    document.getElementById("img24").src = "refresh.jpg"
+
+  }
+  }
+
+
+}
+
+function order_4(){
+
+  var number = GlobalMyArray
+  if (number[3] === x){
+    x=x+1
+    document.getElementById("img4").src = "white.jpg"
+  if (x===25){
+    document.getElementById("img1").src = "refresh.jpg"
+    document.getElementById("img2").src = "refresh.jpg"
+    document.getElementById("img3").src = "refresh.jpg"
+    document.getElementById("img4").src = "refresh.jpg"
+    document.getElementById("img5").src = "refresh.jpg"
+    document.getElementById("img6").src = "refresh.jpg"
+    document.getElementById("img7").src = "refresh.jpg"
+    document.getElementById("img8").src = "refresh.jpg"
+    document.getElementById("img9").src = "refresh.jpg"
+    document.getElementById("img10").src = "refresh.jpg"
+    document.getElementById("img11").src = "refresh.jpg"
+    document.getElementById("img12").src = "refresh.jpg"
+    document.getElementById("img13").src = "refresh.jpg"
+    document.getElementById("img14").src = "success.jpg"
+    document.getElementById("img15").src = "success.jpg"
+    document.getElementById("img16").src = "refresh.jpg"
+    document.getElementById("img17").src = "refresh.jpg"
+    document.getElementById("img18").src = "refresh.jpg"
+    document.getElementById("img19").src = "refresh.jpg"
+    document.getElementById("img20").src = "refresh.jpg"
+    document.getElementById("img21").src = "refresh.jpg"
+    document.getElementById("img22").src = "refresh.jpg"
+    document.getElementById("img23").src = "refresh.jpg"
+    document.getElementById("img24").src = "refresh.jpg"
+
+  }
+  }
+
+}
+
+function order_5(){
+
+  var number = GlobalMyArray
+  if (number[4] === x){
+    x=x+1
+    document.getElementById("img5").src = "white.jpg"
+  if (x===25){
+    document.getElementById("img1").src = "refresh.jpg"
+    document.getElementById("img2").src = "refresh.jpg"
+    document.getElementById("img3").src = "refresh.jpg"
+    document.getElementById("img4").src = "refresh.jpg"
+    document.getElementById("img5").src = "refresh.jpg"
+    document.getElementById("img6").src = "refresh.jpg"
+    document.getElementById("img7").src = "refresh.jpg"
+    document.getElementById("img8").src = "refresh.jpg"
+    document.getElementById("img9").src = "refresh.jpg"
+    document.getElementById("img10").src = "refresh.jpg"
+    document.getElementById("img11").src = "refresh.jpg"
+    document.getElementById("img12").src = "refresh.jpg"
+    document.getElementById("img13").src = "refresh.jpg"
+    document.getElementById("img14").src = "success.jpg"
+    document.getElementById("img15").src = "success.jpg"
+    document.getElementById("img16").src = "refresh.jpg"
+    document.getElementById("img17").src = "refresh.jpg"
+    document.getElementById("img18").src = "refresh.jpg"
+    document.getElementById("img19").src = "refresh.jpg"
+    document.getElementById("img20").src = "refresh.jpg"
+    document.getElementById("img21").src = "refresh.jpg"
+    document.getElementById("img22").src = "refresh.jpg"
+    document.getElementById("img23").src = "refresh.jpg"
+    document.getElementById("img24").src = "refresh.jpg"
+
+  }
+  }
+
+}
+
+function order_6(){
+
+  var number = GlobalMyArray
+  if (number[5] === x){
+    x=x+1
+    document.getElementById("img6").src = "white.jpg"
+  if (x===25){
+    document.getElementById("img1").src = "refresh.jpg"
+    document.getElementById("img2").src = "refresh.jpg"
+    document.getElementById("img3").src = "refresh.jpg"
+    document.getElementById("img4").src = "refresh.jpg"
+    document.getElementById("img5").src = "refresh.jpg"
+    document.getElementById("img6").src = "refresh.jpg"
+    document.getElementById("img7").src = "refresh.jpg"
+    document.getElementById("img8").src = "refresh.jpg"
+    document.getElementById("img9").src = "refresh.jpg"
+    document.getElementById("img10").src = "refresh.jpg"
+    document.getElementById("img11").src = "refresh.jpg"
+    document.getElementById("img12").src = "refresh.jpg"
+    document.getElementById("img13").src = "refresh.jpg"
+    document.getElementById("img14").src = "success.jpg"
+    document.getElementById("img15").src = "success.jpg"
+    document.getElementById("img16").src = "refresh.jpg"
+    document.getElementById("img17").src = "refresh.jpg"
+    document.getElementById("img18").src = "refresh.jpg"
+    document.getElementById("img19").src = "refresh.jpg"
+    document.getElementById("img20").src = "refresh.jpg"
+    document.getElementById("img21").src = "refresh.jpg"
+    document.getElementById("img22").src = "refresh.jpg"
+    document.getElementById("img23").src = "refresh.jpg"
+    document.getElementById("img24").src = "refresh.jpg"
+
+  }
+  }
+
+}
+
+function order_7(){
+
+  var number = GlobalMyArray
+  if (number[6] === x){
+    x=x+1
+    document.getElementById("img7").src = "white.jpg"
+  if (x===25){
+    document.getElementById("img1").src = "refresh.jpg"
+    document.getElementById("img2").src = "refresh.jpg"
+    document.getElementById("img3").src = "refresh.jpg"
+    document.getElementById("img4").src = "refresh.jpg"
+    document.getElementById("img5").src = "refresh.jpg"
+    document.getElementById("img6").src = "refresh.jpg"
+    document.getElementById("img7").src = "refresh.jpg"
+    document.getElementById("img8").src = "refresh.jpg"
+    document.getElementById("img9").src = "refresh.jpg"
+    document.getElementById("img10").src = "refresh.jpg"
+    document.getElementById("img11").src = "refresh.jpg"
+    document.getElementById("img12").src = "refresh.jpg"
+    document.getElementById("img13").src = "refresh.jpg"
+    document.getElementById("img14").src = "success.jpg"
+    document.getElementById("img15").src = "success.jpg"
+    document.getElementById("img16").src = "refresh.jpg"
+    document.getElementById("img17").src = "refresh.jpg"
+    document.getElementById("img18").src = "refresh.jpg"
+    document.getElementById("img19").src = "refresh.jpg"
+    document.getElementById("img20").src = "refresh.jpg"
+    document.getElementById("img21").src = "refresh.jpg"
+    document.getElementById("img22").src = "refresh.jpg"
+    document.getElementById("img23").src = "refresh.jpg"
+    document.getElementById("img24").src = "refresh.jpg"
+  }
+  }
+
+}
+
+function order_8(){
+
+  var number = GlobalMyArray
+  if (number[7] === x){
+    x=x+1
+    document.getElementById("img8").src = "white.jpg"
+  if (x===25){
+    document.getElementById("img1").src = "refresh.jpg"
+    document.getElementById("img2").src = "refresh.jpg"
+    document.getElementById("img3").src = "refresh.jpg"
+    document.getElementById("img4").src = "refresh.jpg"
+    document.getElementById("img5").src = "refresh.jpg"
+    document.getElementById("img6").src = "refresh.jpg"
+    document.getElementById("img7").src = "refresh.jpg"
+    document.getElementById("img8").src = "refresh.jpg"
+    document.getElementById("img9").src = "refresh.jpg"
+    document.getElementById("img10").src = "refresh.jpg"
+    document.getElementById("img11").src = "refresh.jpg"
+    document.getElementById("img12").src = "refresh.jpg"
+    document.getElementById("img13").src = "refresh.jpg"
+    document.getElementById("img14").src = "success.jpg"
+    document.getElementById("img15").src = "success.jpg"
+    document.getElementById("img16").src = "refresh.jpg"
+    document.getElementById("img17").src = "refresh.jpg"
+    document.getElementById("img18").src = "refresh.jpg"
+    document.getElementById("img19").src = "refresh.jpg"
+    document.getElementById("img20").src = "refresh.jpg"
+    document.getElementById("img21").src = "refresh.jpg"
+    document.getElementById("img22").src = "refresh.jpg"
+    document.getElementById("img23").src = "refresh.jpg"
+    document.getElementById("img24").src = "refresh.jpg"
+  }
+  }
+
+}
+
+function order_9(){
+
+  var number = GlobalMyArray
+  if (number[8] === x){
+    x=x+1
+    document.getElementById("img9").src = "white.jpg"
+  if (x===25){
+    document.getElementById("img1").src = "refresh.jpg"
+    document.getElementById("img2").src = "refresh.jpg"
+    document.getElementById("img3").src = "refresh.jpg"
+    document.getElementById("img4").src = "refresh.jpg"
+    document.getElementById("img5").src = "refresh.jpg"
+    document.getElementById("img6").src = "refresh.jpg"
+    document.getElementById("img7").src = "refresh.jpg"
+    document.getElementById("img8").src = "refresh.jpg"
+    document.getElementById("img9").src = "refresh.jpg"
+    document.getElementById("img10").src = "refresh.jpg"
+    document.getElementById("img11").src = "refresh.jpg"
+    document.getElementById("img12").src = "refresh.jpg"
+    document.getElementById("img13").src = "refresh.jpg"
+    document.getElementById("img14").src = "success.jpg"
+    document.getElementById("img15").src = "success.jpg"
+    document.getElementById("img16").src = "refresh.jpg"
+    document.getElementById("img17").src = "refresh.jpg"
+    document.getElementById("img18").src = "refresh.jpg"
+    document.getElementById("img19").src = "refresh.jpg"
+    document.getElementById("img20").src = "refresh.jpg"
+    document.getElementById("img21").src = "refresh.jpg"
+    document.getElementById("img22").src = "refresh.jpg"
+    document.getElementById("img23").src = "refresh.jpg"
+    document.getElementById("img24").src = "refresh.jpg"
+
+  }
+  }
+
+}
+
+function order_10(){
+
+  var number = GlobalMyArray
+  if (number[9] === x){
+    x=x+1
+    document.getElementById("img10").src = "white.jpg"
+  if (x===25){
+    document.getElementById("img1").src = "refresh.jpg"
+    document.getElementById("img2").src = "refresh.jpg"
+    document.getElementById("img3").src = "refresh.jpg"
+    document.getElementById("img4").src = "refresh.jpg"
+    document.getElementById("img5").src = "refresh.jpg"
+    document.getElementById("img6").src = "refresh.jpg"
+    document.getElementById("img7").src = "refresh.jpg"
+    document.getElementById("img8").src = "refresh.jpg"
+    document.getElementById("img9").src = "refresh.jpg"
+    document.getElementById("img10").src = "refresh.jpg"
+    document.getElementById("img11").src = "refresh.jpg"
+    document.getElementById("img12").src = "refresh.jpg"
+    document.getElementById("img13").src = "refresh.jpg"
+    document.getElementById("img14").src = "success.jpg"
+    document.getElementById("img15").src = "success.jpg"
+    document.getElementById("img16").src = "refresh.jpg"
+    document.getElementById("img17").src = "refresh.jpg"
+    document.getElementById("img18").src = "refresh.jpg"
+    document.getElementById("img19").src = "refresh.jpg"
+    document.getElementById("img20").src = "refresh.jpg"
+    document.getElementById("img21").src = "refresh.jpg"
+    document.getElementById("img22").src = "refresh.jpg"
+    document.getElementById("img23").src = "refresh.jpg"
+    document.getElementById("img24").src = "refresh.jpg"
+
+  }
+  }
+}
+
+function order_10(){
+
+  var number = GlobalMyArray
+  if (number[9] === x){
+    x=x+1
+    document.getElementById("img10").src = "white.jpg"
+  if (x===25){
+    document.getElementById("img1").src = "refresh.jpg"
+    document.getElementById("img2").src = "refresh.jpg"
+    document.getElementById("img3").src = "refresh.jpg"
+    document.getElementById("img4").src = "refresh.jpg"
+    document.getElementById("img5").src = "refresh.jpg"
+    document.getElementById("img6").src = "refresh.jpg"
+    document.getElementById("img7").src = "refresh.jpg"
+    document.getElementById("img8").src = "refresh.jpg"
+    document.getElementById("img9").src = "refresh.jpg"
+    document.getElementById("img10").src = "refresh.jpg"
+    document.getElementById("img11").src = "refresh.jpg"
+    document.getElementById("img12").src = "refresh.jpg"
+    document.getElementById("img13").src = "refresh.jpg"
+    document.getElementById("img14").src = "success.jpg"
+    document.getElementById("img15").src = "success.jpg"
+    document.getElementById("img16").src = "refresh.jpg"
+    document.getElementById("img17").src = "refresh.jpg"
+    document.getElementById("img18").src = "refresh.jpg"
+    document.getElementById("img19").src = "refresh.jpg"
+    document.getElementById("img20").src = "refresh.jpg"
+    document.getElementById("img21").src = "refresh.jpg"
+    document.getElementById("img22").src = "refresh.jpg"
+    document.getElementById("img23").src = "refresh.jpg"
+    document.getElementById("img24").src = "refresh.jpg"
+
+  }
+  }
+
+}
+function order_11(){
+
+  var number = GlobalMyArray
+  if (number[10] === x){
+    x=x+1
+    document.getElementById("img11").src = "white.jpg"
+  if (x===25){
+    document.getElementById("img1").src = "refresh.jpg"
+    document.getElementById("img2").src = "refresh.jpg"
+    document.getElementById("img3").src = "refresh.jpg"
+    document.getElementById("img4").src = "refresh.jpg"
+    document.getElementById("img5").src = "refresh.jpg"
+    document.getElementById("img6").src = "refresh.jpg"
+    document.getElementById("img7").src = "refresh.jpg"
+    document.getElementById("img8").src = "refresh.jpg"
+    document.getElementById("img9").src = "refresh.jpg"
+    document.getElementById("img10").src = "refresh.jpg"
+    document.getElementById("img11").src = "refresh.jpg"
+    document.getElementById("img12").src = "refresh.jpg"
+    document.getElementById("img13").src = "refresh.jpg"
+    document.getElementById("img14").src = "success.jpg"
+    document.getElementById("img15").src = "success.jpg"
+    document.getElementById("img16").src = "refresh.jpg"
+    document.getElementById("img17").src = "refresh.jpg"
+    document.getElementById("img18").src = "refresh.jpg"
+    document.getElementById("img19").src = "refresh.jpg"
+    document.getElementById("img20").src = "refresh.jpg"
+    document.getElementById("img21").src = "refresh.jpg"
+    document.getElementById("img22").src = "refresh.jpg"
+    document.getElementById("img23").src = "refresh.jpg"
+    document.getElementById("img24").src = "refresh.jpg"
+
+  }
+  }
+
+}
+
+function order_12(){
+
+  var number = GlobalMyArray
+  if (number[11] === x){
+    x=x+1
+    document.getElementById("img12").src = "white.jpg"
+  if (x===25){
+    document.getElementById("img1").src = "refresh.jpg"
+    document.getElementById("img2").src = "refresh.jpg"
+    document.getElementById("img3").src = "refresh.jpg"
+    document.getElementById("img4").src = "refresh.jpg"
+    document.getElementById("img5").src = "refresh.jpg"
+    document.getElementById("img6").src = "refresh.jpg"
+    document.getElementById("img7").src = "refresh.jpg"
+    document.getElementById("img8").src = "refresh.jpg"
+    document.getElementById("img9").src = "refresh.jpg"
+    document.getElementById("img10").src = "refresh.jpg"
+    document.getElementById("img11").src = "refresh.jpg"
+    document.getElementById("img12").src = "refresh.jpg"
+    document.getElementById("img13").src = "refresh.jpg"
+    document.getElementById("img14").src = "success.jpg"
+    document.getElementById("img15").src = "success.jpg"
+    document.getElementById("img16").src = "refresh.jpg"
+    document.getElementById("img17").src = "refresh.jpg"
+    document.getElementById("img18").src = "refresh.jpg"
+    document.getElementById("img19").src = "refresh.jpg"
+    document.getElementById("img20").src = "refresh.jpg"
+    document.getElementById("img21").src = "refresh.jpg"
+    document.getElementById("img22").src = "refresh.jpg"
+    document.getElementById("img23").src = "refresh.jpg"
+    document.getElementById("img24").src = "refresh.jpg"
+
+  }
+  }
+
+}
+
+function order_13(){
+
+  var number = GlobalMyArray
+  if (number[12] === x){
+    x=x+1
+    document.getElementById("img13").src = "white.jpg"
+  if (x===25){
+    document.getElementById("img1").src = "refresh.jpg"
+    document.getElementById("img2").src = "refresh.jpg"
+    document.getElementById("img3").src = "refresh.jpg"
+    document.getElementById("img4").src = "refresh.jpg"
+    document.getElementById("img5").src = "refresh.jpg"
+    document.getElementById("img6").src = "refresh.jpg"
+    document.getElementById("img7").src = "refresh.jpg"
+    document.getElementById("img8").src = "refresh.jpg"
+    document.getElementById("img9").src = "refresh.jpg"
+    document.getElementById("img10").src = "refresh.jpg"
+    document.getElementById("img11").src = "refresh.jpg"
+    document.getElementById("img12").src = "refresh.jpg"
+    document.getElementById("img13").src = "refresh.jpg"
+    document.getElementById("img14").src = "success.jpg"
+    document.getElementById("img15").src = "success.jpg"
+    document.getElementById("img16").src = "refresh.jpg"
+    document.getElementById("img17").src = "refresh.jpg"
+    document.getElementById("img18").src = "refresh.jpg"
+    document.getElementById("img19").src = "refresh.jpg"
+    document.getElementById("img20").src = "refresh.jpg"
+    document.getElementById("img21").src = "refresh.jpg"
+    document.getElementById("img22").src = "refresh.jpg"
+    document.getElementById("img23").src = "refresh.jpg"
+    document.getElementById("img24").src = "refresh.jpg"
+
+  }
+  }
+
+}
+
+function order_14(){
+
+  var number = GlobalMyArray
+  if (number[13] === x){
+    x=x+1
+    document.getElementById("img14").src = "white.jpg"
+  if (x===25){
+    document.getElementById("img1").src = "refresh.jpg"
+    document.getElementById("img2").src = "refresh.jpg"
+    document.getElementById("img3").src = "refresh.jpg"
+    document.getElementById("img4").src = "refresh.jpg"
+    document.getElementById("img5").src = "refresh.jpg"
+    document.getElementById("img6").src = "refresh.jpg"
+    document.getElementById("img7").src = "refresh.jpg"
+    document.getElementById("img8").src = "refresh.jpg"
+    document.getElementById("img9").src = "refresh.jpg"
+    document.getElementById("img10").src = "refresh.jpg"
+    document.getElementById("img11").src = "refresh.jpg"
+    document.getElementById("img12").src = "refresh.jpg"
+    document.getElementById("img13").src = "refresh.jpg"
+    document.getElementById("img14").src = "success.jpg"
+    document.getElementById("img15").src = "success.jpg"
+    document.getElementById("img16").src = "refresh.jpg"
+    document.getElementById("img17").src = "refresh.jpg"
+    document.getElementById("img18").src = "refresh.jpg"
+    document.getElementById("img19").src = "refresh.jpg"
+    document.getElementById("img20").src = "refresh.jpg"
+    document.getElementById("img21").src = "refresh.jpg"
+    document.getElementById("img22").src = "refresh.jpg"
+    document.getElementById("img23").src = "refresh.jpg"
+    document.getElementById("img24").src = "refresh.jpg"
+
+  }
+  }
+
+}
+
+function order_15(){
+
+  var number = GlobalMyArray
+  if (number[14] === x){
+    x=x+1
+    document.getElementById("img15").src = "white.jpg"
+  if (x===25){
+    document.getElementById("img1").src = "refresh.jpg"
+    document.getElementById("img2").src = "refresh.jpg"
+    document.getElementById("img3").src = "refresh.jpg"
+    document.getElementById("img4").src = "refresh.jpg"
+    document.getElementById("img5").src = "refresh.jpg"
+    document.getElementById("img6").src = "refresh.jpg"
+    document.getElementById("img7").src = "refresh.jpg"
+    document.getElementById("img8").src = "refresh.jpg"
+    document.getElementById("img9").src = "refresh.jpg"
+    document.getElementById("img10").src = "refresh.jpg"
+    document.getElementById("img11").src = "refresh.jpg"
+    document.getElementById("img12").src = "refresh.jpg"
+    document.getElementById("img13").src = "refresh.jpg"
+    document.getElementById("img14").src = "success.jpg"
+    document.getElementById("img15").src = "success.jpg"
+    document.getElementById("img16").src = "refresh.jpg"
+    document.getElementById("img17").src = "refresh.jpg"
+    document.getElementById("img18").src = "refresh.jpg"
+    document.getElementById("img19").src = "refresh.jpg"
+    document.getElementById("img20").src = "refresh.jpg"
+    document.getElementById("img21").src = "refresh.jpg"
+    document.getElementById("img22").src = "refresh.jpg"
+    document.getElementById("img23").src = "refresh.jpg"
+    document.getElementById("img24").src = "refresh.jpg"
+
+  }
+  }
+
+}
+
+function order_16(){
+
+  var number = GlobalMyArray
+  if (number[15] === x){
+    x=x+1
+    document.getElementById("img16").src = "white.jpg"
+  if (x===25){
+    document.getElementById("img1").src = "refresh.jpg"
+    document.getElementById("img2").src = "refresh.jpg"
+    document.getElementById("img3").src = "refresh.jpg"
+    document.getElementById("img4").src = "refresh.jpg"
+    document.getElementById("img5").src = "refresh.jpg"
+    document.getElementById("img6").src = "refresh.jpg"
+    document.getElementById("img7").src = "refresh.jpg"
+    document.getElementById("img8").src = "refresh.jpg"
+    document.getElementById("img9").src = "refresh.jpg"
+    document.getElementById("img10").src = "refresh.jpg"
+    document.getElementById("img11").src = "refresh.jpg"
+    document.getElementById("img12").src = "refresh.jpg"
+    document.getElementById("img13").src = "refresh.jpg"
+    document.getElementById("img14").src = "success.jpg"
+    document.getElementById("img15").src = "success.jpg"
+    document.getElementById("img16").src = "refresh.jpg"
+    document.getElementById("img17").src = "refresh.jpg"
+    document.getElementById("img18").src = "refresh.jpg"
+    document.getElementById("img19").src = "refresh.jpg"
+    document.getElementById("img20").src = "refresh.jpg"
+    document.getElementById("img21").src = "refresh.jpg"
+    document.getElementById("img22").src = "refresh.jpg"
+    document.getElementById("img23").src = "refresh.jpg"
+    document.getElementById("img24").src = "refresh.jpg"
+
+  }
+  }
+
+}
+
+function order_17(){
+
+  var number = GlobalMyArray
+  if (number[16] === x){
+    x=x+1
+    document.getElementById("img17").src = "white.jpg"
+  if (x===25){
+    document.getElementById("img1").src = "refresh.jpg"
+    document.getElementById("img2").src = "refresh.jpg"
+    document.getElementById("img3").src = "refresh.jpg"
+    document.getElementById("img4").src = "refresh.jpg"
+    document.getElementById("img5").src = "refresh.jpg"
+    document.getElementById("img6").src = "refresh.jpg"
+    document.getElementById("img7").src = "refresh.jpg"
+    document.getElementById("img8").src = "refresh.jpg"
+    document.getElementById("img9").src = "refresh.jpg"
+    document.getElementById("img10").src = "refresh.jpg"
+    document.getElementById("img11").src = "refresh.jpg"
+    document.getElementById("img12").src = "refresh.jpg"
+    document.getElementById("img13").src = "refresh.jpg"
+    document.getElementById("img14").src = "success.jpg"
+    document.getElementById("img15").src = "success.jpg"
+    document.getElementById("img16").src = "refresh.jpg"
+    document.getElementById("img17").src = "refresh.jpg"
+    document.getElementById("img18").src = "refresh.jpg"
+    document.getElementById("img19").src = "refresh.jpg"
+    document.getElementById("img20").src = "refresh.jpg"
+    document.getElementById("img21").src = "refresh.jpg"
+    document.getElementById("img22").src = "refresh.jpg"
+    document.getElementById("img23").src = "refresh.jpg"
+    document.getElementById("img24").src = "refresh.jpg"
+
+  }
+  }
+
+}
+
+function order_18(){
+
+  var number = GlobalMyArray
+  if (number[17] === x){
+    x=x+1
+    document.getElementById("img18").src = "white.jpg"
+  }
+  if (x===25){
+    document.getElementById("img1").src = "refresh.jpg"
+    document.getElementById("img2").src = "refresh.jpg"
+    document.getElementById("img3").src = "refresh.jpg"
+    document.getElementById("img4").src = "refresh.jpg"
+    document.getElementById("img5").src = "refresh.jpg"
+    document.getElementById("img6").src = "refresh.jpg"
+    document.getElementById("img7").src = "refresh.jpg"
+    document.getElementById("img8").src = "refresh.jpg"
+    document.getElementById("img9").src = "refresh.jpg"
+    document.getElementById("img10").src = "refresh.jpg"
+    document.getElementById("img11").src = "refresh.jpg"
+    document.getElementById("img12").src = "refresh.jpg"
+    document.getElementById("img13").src = "refresh.jpg"
+    document.getElementById("img14").src = "success.jpg"
+    document.getElementById("img15").src = "success.jpg"
+    document.getElementById("img16").src = "refresh.jpg"
+    document.getElementById("img17").src = "refresh.jpg"
+    document.getElementById("img18").src = "refresh.jpg"
+    document.getElementById("img19").src = "refresh.jpg"
+    document.getElementById("img20").src = "refresh.jpg"
+    document.getElementById("img21").src = "refresh.jpg"
+    document.getElementById("img22").src = "refresh.jpg"
+    document.getElementById("img23").src = "refresh.jpg"
+    document.getElementById("img24").src = "refresh.jpg"
+
+  }
+}
+
+
+function order_19(){
+
+  var number = GlobalMyArray
+  if (number[18] === x){
+    x=x+1
+    document.getElementById("img19").src = "white.jpg"
+  if (x===25){
+    document.getElementById("img1").src = "refresh.jpg"
+    document.getElementById("img2").src = "refresh.jpg"
+    document.getElementById("img3").src = "refresh.jpg"
+    document.getElementById("img4").src = "refresh.jpg"
+    document.getElementById("img5").src = "refresh.jpg"
+    document.getElementById("img6").src = "refresh.jpg"
+    document.getElementById("img7").src = "refresh.jpg"
+    document.getElementById("img8").src = "refresh.jpg"
+    document.getElementById("img9").src = "refresh.jpg"
+    document.getElementById("img10").src = "refresh.jpg"
+    document.getElementById("img11").src = "refresh.jpg"
+    document.getElementById("img12").src = "refresh.jpg"
+    document.getElementById("img13").src = "refresh.jpg"
+    document.getElementById("img14").src = "success.jpg"
+    document.getElementById("img15").src = "success.jpg"
+    document.getElementById("img16").src = "refresh.jpg"
+    document.getElementById("img17").src = "refresh.jpg"
+    document.getElementById("img18").src = "refresh.jpg"
+    document.getElementById("img19").src = "refresh.jpg"
+    document.getElementById("img20").src = "refresh.jpg"
+    document.getElementById("img21").src = "refresh.jpg"
+    document.getElementById("img22").src = "refresh.jpg"
+    document.getElementById("img23").src = "refresh.jpg"
+    document.getElementById("img24").src = "refresh.jpg"
+
+  }
+  }
+
+}
+
+function order_20(){
+
+  var number = GlobalMyArray
+  if (number[19] === x){
+    x=x+1
+    document.getElementById("img20").src ="white.jpg"
+    }
+  if (x===25){
+    document.getElementById("img1").src = "refresh.jpg"
+    document.getElementById("img2").src = "refresh.jpg"
+    document.getElementById("img3").src = "refresh.jpg"
+    document.getElementById("img4").src = "refresh.jpg"
+    document.getElementById("img5").src = "refresh.jpg"
+    document.getElementById("img6").src = "refresh.jpg"
+    document.getElementById("img7").src = "refresh.jpg"
+    document.getElementById("img8").src = "refresh.jpg"
+    document.getElementById("img9").src = "refresh.jpg"
+    document.getElementById("img10").src = "refresh.jpg"
+    document.getElementById("img11").src = "refresh.jpg"
+    document.getElementById("img12").src = "refresh.jpg"
+    document.getElementById("img13").src = "refresh.jpg"
+    document.getElementById("img14").src = "success.jpg"
+    document.getElementById("img15").src = "success.jpg"
+    document.getElementById("img16").src = "refresh.jpg"
+    document.getElementById("img17").src = "refresh.jpg"
+    document.getElementById("img18").src = "refresh.jpg"
+    document.getElementById("img19").src = "refresh.jpg"
+    document.getElementById("img20").src = "refresh.jpg"
+    document.getElementById("img21").src = "refresh.jpg"
+    document.getElementById("img22").src = "refresh.jpg"
+    document.getElementById("img23").src = "refresh.jpg"
+    document.getElementById("img24").src = "refresh.jpg"
+
+  }
+}
+
+function order_21(){
+
+  var number = GlobalMyArray
+  if (number[20] === x){
+    x=x+1
+    document.getElementById("img21").src ="white.jpg"
+    }
+  if (x===25){
+    document.getElementById("img1").src = "refresh.jpg"
+    document.getElementById("img2").src = "refresh.jpg"
+    document.getElementById("img3").src = "refresh.jpg"
+    document.getElementById("img4").src = "refresh.jpg"
+    document.getElementById("img5").src = "refresh.jpg"
+    document.getElementById("img6").src = "refresh.jpg"
+    document.getElementById("img7").src = "refresh.jpg"
+    document.getElementById("img8").src = "refresh.jpg"
+    document.getElementById("img9").src = "refresh.jpg"
+    document.getElementById("img10").src = "refresh.jpg"
+    document.getElementById("img11").src = "refresh.jpg"
+    document.getElementById("img12").src = "refresh.jpg"
+    document.getElementById("img13").src = "refresh.jpg"
+    document.getElementById("img14").src = "success.jpg"
+    document.getElementById("img15").src = "success.jpg"
+    document.getElementById("img16").src = "refresh.jpg"
+    document.getElementById("img17").src = "refresh.jpg"
+    document.getElementById("img18").src = "refresh.jpg"
+    document.getElementById("img19").src = "refresh.jpg"
+    document.getElementById("img20").src = "refresh.jpg"
+    document.getElementById("img21").src = "refresh.jpg"
+    document.getElementById("img22").src = "refresh.jpg"
+    document.getElementById("img23").src = "refresh.jpg"
+    document.getElementById("img24").src = "refresh.jpg"
+
+  }
+}
+
+function order_22(){
+
+  var number = GlobalMyArray
+  if (number[21] === x){
+    x=x+1
+    document.getElementById("img22").src ="white.jpg"
+    }
+  if (x===25){
+    document.getElementById("img1").src = "refresh.jpg"
+    document.getElementById("img2").src = "refresh.jpg"
+    document.getElementById("img3").src = "refresh.jpg"
+    document.getElementById("img4").src = "refresh.jpg"
+    document.getElementById("img5").src = "refresh.jpg"
+    document.getElementById("img6").src = "refresh.jpg"
+    document.getElementById("img7").src = "refresh.jpg"
+    document.getElementById("img8").src = "refresh.jpg"
+    document.getElementById("img9").src = "refresh.jpg"
+    document.getElementById("img10").src = "refresh.jpg"
+    document.getElementById("img11").src = "refresh.jpg"
+    document.getElementById("img12").src = "refresh.jpg"
+    document.getElementById("img13").src = "refresh.jpg"
+    document.getElementById("img14").src = "success.jpg"
+    document.getElementById("img15").src = "success.jpg"
+    document.getElementById("img16").src = "refresh.jpg"
+    document.getElementById("img17").src = "refresh.jpg"
+    document.getElementById("img18").src = "refresh.jpg"
+    document.getElementById("img19").src = "refresh.jpg"
+    document.getElementById("img20").src = "refresh.jpg"
+    document.getElementById("img21").src = "refresh.jpg"
+    document.getElementById("img22").src = "refresh.jpg"
+    document.getElementById("img23").src = "refresh.jpg"
+    document.getElementById("img24").src = "refresh.jpg"
+
+  }
+}
+
+function order_23(){
+
+  var number = GlobalMyArray
+  if (number[22] === x){
+    x=x+1
+    document.getElementById("img23").src ="white.jpg"
+    }
+  if (x===25){
+    document.getElementById("img1").src = "refresh.jpg"
+    document.getElementById("img2").src = "refresh.jpg"
+    document.getElementById("img3").src = "refresh.jpg"
+    document.getElementById("img4").src = "refresh.jpg"
+    document.getElementById("img5").src = "refresh.jpg"
+    document.getElementById("img6").src = "refresh.jpg"
+    document.getElementById("img7").src = "refresh.jpg"
+    document.getElementById("img8").src = "refresh.jpg"
+    document.getElementById("img9").src = "refresh.jpg"
+    document.getElementById("img10").src = "refresh.jpg"
+    document.getElementById("img11").src = "refresh.jpg"
+    document.getElementById("img12").src = "refresh.jpg"
+    document.getElementById("img13").src = "refresh.jpg"
+    document.getElementById("img14").src = "success.jpg"
+    document.getElementById("img15").src = "success.jpg"
+    document.getElementById("img16").src = "refresh.jpg"
+    document.getElementById("img17").src = "refresh.jpg"
+    document.getElementById("img18").src = "refresh.jpg"
+    document.getElementById("img19").src = "refresh.jpg"
+    document.getElementById("img20").src = "refresh.jpg"
+    document.getElementById("img21").src = "refresh.jpg"
+    document.getElementById("img22").src = "refresh.jpg"
+    document.getElementById("img23").src = "refresh.jpg"
+    document.getElementById("img24").src = "refresh.jpg"
+
+  }
+}
+
+
+function order_24(){
+
+  var number = GlobalMyArray
+  if (number[23] === x){
+    x=x+1
+    document.getElementById("img24").src ="white.jpg"
+    }
+  if (x===25){
+    document.getElementById("img1").src = "refresh.jpg"
+    document.getElementById("img2").src = "refresh.jpg"
+    document.getElementById("img3").src = "refresh.jpg"
+    document.getElementById("img4").src = "refresh.jpg"
+    document.getElementById("img5").src = "refresh.jpg"
+    document.getElementById("img6").src = "refresh.jpg"
+    document.getElementById("img7").src = "refresh.jpg"
+    document.getElementById("img8").src = "refresh.jpg"
+    document.getElementById("img9").src = "refresh.jpg"
+    document.getElementById("img10").src = "refresh.jpg"
+    document.getElementById("img11").src = "refresh.jpg"
+    document.getElementById("img12").src = "refresh.jpg"
+    document.getElementById("img13").src = "refresh.jpg"
+    document.getElementById("img14").src = "success.jpg"
+    document.getElementById("img15").src = "success.jpg"
+    document.getElementById("img16").src = "refresh.jpg"
+    document.getElementById("img17").src = "refresh.jpg"
+    document.getElementById("img18").src = "refresh.jpg"
+    document.getElementById("img19").src = "refresh.jpg"
+    document.getElementById("img20").src = "refresh.jpg"
+    document.getElementById("img21").src = "refresh.jpg"
+    document.getElementById("img22").src = "refresh.jpg"
+    document.getElementById("img23").src = "refresh.jpg"
+    document.getElementById("img24").src = "refresh.jpg"
+
+  }
+}
+
+function myFunction() {
+
+      var number = GlobalMyArray
+
+      document.getElementById("img1").src = images[number[0]];
+      document.getElementById("img2").src = images[number[1]];
+      document.getElementById("img3").src = images[number[2]];
+      document.getElementById("img4").src = images[number[3]];
+      document.getElementById("img5").src = images[number[4]];
+      document.getElementById("img6").src = images[number[5]];
+      document.getElementById("img7").src = images[number[6]];
+      document.getElementById("img8").src = images[number[7]];
+      document.getElementById("img9").src = images[number[8]];
+      document.getElementById("img10").src = images[number[9]];
+      document.getElementById("img11").src = images[number[10]];
+      document.getElementById("img12").src = images[number[11]];
+      document.getElementById("img13").src = images[number[12]];
+      document.getElementById("img14").src = images[number[13]];
+      document.getElementById("img15").src = images[number[14]];
+      document.getElementById("img16").src = images[number[15]];
+      document.getElementById("img17").src = images[number[16]];
+      document.getElementById("img18").src = images[number[17]];
+      document.getElementById("img19").src = images[number[18]];
+      document.getElementById("img20").src = images[number[19]];
+      document.getElementById("img21").src = images[number[20]];
+      document.getElementById("img22").src = images[number[21]];
+      document.getElementById("img23").src = images[number[22]];
+      document.getElementById("img24").src = images[number[23]];
+
+}
+    var images=[]
+          images[1] = "one.jpg";
+          images[2] = "two.jpg";
+          images[3] = "three.jpg";
+          images[4] = "four.jpg";
+          images[5] = "five.jpg";
+          images[6] = "six.jpg";
+          images[7] = "seven.jpg";
+          images[8] = "eight.jpg";
+          images[9] = "nine.jpg";
+          images[10] = "ten.jpg";
+          images[11] = "eleven.jpg";
+          images[12] = "twelve.jpg";
+          images[13] = "thirteen.jpg";
+          images[14] = "fourteen.jpg";
+          images[15] = "fifteen.jpg";
+          images[16] = "sixteen.jpg";
+          images[17] = "seventeen.jpg";
+          images[18] = "eighteen.jpg";
+          images[19] = "nineteen.jpg";
+          images[20] = "twenty.jpg";
+          images[21] = "twentyone.jpg";
+          images[22] = "twentytwo.jpg";
+          images[23] = "twentythree.jpg";
+          images[24] = "twentyfour.jpg";
+
+
+
+
+
+
+</script>
+
+</html>
